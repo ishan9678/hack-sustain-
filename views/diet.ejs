@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diet Question</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/diet.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- ... Your existing HTML ... -->
+
+    <div class="question-container">
+      <h1 class="question-label">What's Your Diet Like?</h1>
+      <form action="/calculate-diet-emissions" method="post">
+        <button type="submit" name="diet" value="Meat Eater" class="diet-button" style="background-color: #388e3c;">Meat Eater</button>
+        <button type="submit" name="diet" value="Vegetarian" class="diet-button" style="background-color: #388e3c;">Vegetarian</button>
+        <button type="submit" name="diet" value="Vegan" class="diet-button" style="background-color: #388e3c;">Vegan</button>
+      </form>
+    </div>
+
+    <!-- ... Rest of your HTML ... -->
+
+  </div>
+  <div class="image-container">
+    <img class="image" src="images/undraw_breakfast_psiw.svg" alt="Image">
+  </div>
+  </div>
+
+  <script>
+    function selectDiet(dietType) {
+      alert('You selected: ' + dietType);
+    }
+  </script>
+</body>
+
+</html>

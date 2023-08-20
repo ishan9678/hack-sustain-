@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Handjet&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/landing.css">
+</head>
+
+<body>
+  <div id="earth-container">
+    <div id="earth">
+      <div class="landing-heading">
+        <h1>Project Odyssey</h1>
+      </div>
+      <div id="buttons" class="sign-buttons">
+        <button class="button-29" role="button" onclick="redirectWithDelay('/register')">Register</button>
+        <button class="button-29 login-button" role="button" onclick="redirectWithDelay('/login')">Login</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const earthContainer = document.getElementById('earth-container');
+    const earth = document.getElementById('earth');
+    const buttons = document.getElementById('buttons');
+
+    buttons.addEventListener('click', () => {
+      // Zoom in on the continents
+      earth.style.transform = 'scale(1.5)';
+      buttons.style.display = 'none';
+      setTimeout(() => {
+        buttons.style.display = 'none';
+      }, 4000); // Show buttons after 3 seconds of zooming
+    });
+
+    function redirectWithDelay(url) {
+      setTimeout(function() {
+        window.location.href = url;
+      }, 3000); // 3000 milliseconds = 3 seconds
+    }
+  </script>
+</body>
+
+</html>
